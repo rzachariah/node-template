@@ -9,13 +9,19 @@ const bag = {
 console.log( "bag", bag );
 
 const letters = [ "a", "b", "c" ];
-console.log( letters );
-
 if( letters ) {
-  console.log( "ABC" );
+  console.log( letters );
 }
 
 for( let i = 0; i < 5; i += 1 );
+
+switch ( letters[0] ) {
+  case "a":
+    console.log( "a" );
+    break;
+  default:
+    console.log( "default" );
+}
 
 const fruitFoods = [
   "apple juice",
