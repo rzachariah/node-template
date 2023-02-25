@@ -11,6 +11,12 @@ console.log( "bag", bag );
 const letters = [ "a", "b", "c" ];
 console.log( letters );
 
+if( letters ) {
+  console.log( "ABC" );
+}
+
+for( let i = 0; i < 5; i += 1 );
+
 const fruitFoods = [
   "apple juice",
   "orange marmalade",
@@ -21,7 +27,7 @@ const fruitFoods = [
 console.log( "fruitFoods", fruitFoods );
 
 function sayMyName( name: string ): void {
-  if ( name === "Heisenberg" ) {
+  if( name === "Heisenberg" ) {
     console.log( "You're right 👍" );
   } else {
     console.log( "You're wrong 👎" );

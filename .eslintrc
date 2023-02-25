@@ -23,5 +23,6 @@
     "quotes": ["error", "double"],
     "space-in-parens": ["error", "always"],
     "array-bracket-spacing": [ "error", "always" ],
+    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ],
   }
 }
