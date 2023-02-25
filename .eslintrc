@@ -8,8 +8,6 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb-base"
   ],
-  "overrides": [
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -23,6 +21,17 @@
     "quotes": ["error", "double"],
     "space-in-parens": ["error", "always"],
     "array-bracket-spacing": [ "error", "always" ],
-    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ],
-  }
+    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.ts",
+        "**/*.int.ts"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
