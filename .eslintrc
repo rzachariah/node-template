@@ -19,20 +19,30 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
       }
     }
   },
   "rules": {
-    "no-console": "off",
     "quotes": ["error", "double"],
     "space-in-parens": ["error", "always"],
     "array-bracket-spacing": [ "error", "always" ],
     "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ],
     "max-len": [ "warn", { "code": 255, "comments": 255 } ],
+    "max-classes-per-file": "off",
+    "no-console": "off",
     "no-return-await": "off",
     "no-plusplus": "off",
-    "max-classes-per-file": "off",
+    "no-empty-function": "off",
+    "no-useless-constructor": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "import/prefer-default-export": "off",
     "import/extensions": [
       "error",
