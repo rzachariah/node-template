@@ -16,12 +16,35 @@
   "plugins": [
     "@typescript-eslint"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "no-console": "off",
     "quotes": ["error", "double"],
     "space-in-parens": ["error", "always"],
     "array-bracket-spacing": [ "error", "always" ],
-    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ]
+    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ],
+    "max-len": [ "warn", { "code": 255, "comments": 255 } ],
+    "no-return-await": "off",
+    "no-plusplus": "off",
+    "max-classes-per-file": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+   "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
   "overrides": [
     {

@@ -1,3 +1,9 @@
+import { isOdd } from "./util";
+
+if( isOdd( 7 ) ) {
+  console.log( "It's odd!" );
+}
+
 const o = { foo: "bar" };
 console.log( o );
 
