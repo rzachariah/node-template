@@ -1,12 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb-base"
+    "airbnb-base",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -14,7 +17,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint", "prettier"
   ],
   "settings": {
     "import/resolver": {
@@ -24,11 +27,7 @@
     }
   },
   "rules": {
-    "quotes": ["error", "double"],
-    "space-in-parens": ["error", "always"],
-    "array-bracket-spacing": [ "error", "always" ],
-    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ],
-    "max-len": [ "warn", { "code": 255, "comments": 255 } ],
+    "prettier/prettier": "error",
     "max-classes-per-file": "off",
     "no-console": "off",
     "no-return-await": "off",
@@ -55,16 +54,5 @@
       }
    ],
    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
-  },
-  "overrides": [
-    {
-      "files": [
-        "**/*.test.ts",
-        "**/*.int.ts"
-      ],
-      "env": {
-        "jest": true
-      }
-    }
-  ]
+  }
 }
