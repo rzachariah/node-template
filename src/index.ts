@@ -1,6 +1,6 @@
 import { isOdd } from "./util";
 
-if( isOdd( 7 ) ) {
+if ( isOdd( 7 )) {
   console.log( "It's odd!" );
 }
 
@@ -15,18 +15,18 @@ const bag = {
 console.log( "bag", bag );
 
 const letters = [ "a", "b", "c" ];
-if( letters ) {
+if ( letters ) {
   console.log( letters );
 }
 
-for( let i = 0; i < 5; i += 1 );
+for ( let i = 0; i < 5; i += 1 ) { }
 
-switch ( letters[0] ) {
-  case "a":
-    console.log( "a" );
-    break;
-  default:
-    console.log( "default" );
+switch ( letters[ 0 ]) {
+case "a":
+  console.log( "a" );
+  break;
+default:
+  console.log( "default" );
 }
 
 const fruitFoods = [
@@ -39,7 +39,7 @@ const fruitFoods = [
 console.log( "fruitFoods", fruitFoods );
 
 function sayMyName( name: string ): void {
-  if( name === "Heisenberg" ) {
+  if ( name === "Heisenberg" ) {
     console.log( "You're right 👍" );
   } else {
     console.log( "You're wrong 👎" );
