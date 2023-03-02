@@ -180,3 +180,7 @@ Lint/format, build, and run the project:
 ```
 npm start
 ```
+
+## Notes
+
+For react development, swap in package `eslint-config-airbnb` and add `airbnb` to extends in place of `airbnb-base`.
