@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { isOdd } from "./util";
 
 if (isOdd(7)) {
