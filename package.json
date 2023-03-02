@@ -6,9 +6,9 @@
   "scripts": {
     "build": "npm run lint:fix && rimraf ./build && tsc",
     "start": "npm run build && node build",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "lint:fix": "eslint src --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

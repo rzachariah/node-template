@@ -1,10 +1,10 @@
 # node-template
 
-Template for node development with typescript and eslint integration.
+Template for typescript node development with eslint+airbnb+prettier.
 
 ## What is this?
 
-This is a boilerplate nodejs typescript project that uses eslint for linting and formatting. The eslint setup uses airbnb config with a few custom rules to make things comfier--inspiration @instafluff.
+This is a boilerplate nodejs typescript project that uses eslint for linting and prettier formatting. The eslint setup uses airbnb-base config.
 
 ## Steps to reproduce
 
@@ -97,4 +97,19 @@ Add VSCode integration
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true
 }
+```
+
+Add npm scripts (require additional package: rimraf)
+
+```
+    "build": "npm run lint:fix && rimraf ./build && tsc",
+    "start": "npm run build && node build",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+```
+
+Lint/format, build, and run the project:
+
+```
+npm start
 ```
