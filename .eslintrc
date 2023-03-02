@@ -8,16 +8,15 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb-base"
+    "airbnb-base",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint", "prettier"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -26,11 +25,7 @@
     }
   },
   "rules": {
-    "quotes": ["error", "double"],
-    "space-in-parens": ["error", "always"],
-    "array-bracket-spacing": [ "error", "always" ],
-    "keyword-spacing": [ "error", { "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } } ],
-    "max-len": [ "warn", { "code": 255, "comments": 255 } ],
+    "prettier/prettier": "error",
     "no-return-await": "off",
     "no-plusplus": "off",
     "no-shadow": "off",
@@ -47,7 +42,7 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-   "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }

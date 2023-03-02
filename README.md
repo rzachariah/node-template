@@ -14,6 +14,15 @@ Create node project.
 npm init -y
 ```
 
+Add source.
+
+```
+mkdir src
+touch src/index.ts
+```
+
+Write some code.
+
 Install typescript and Node ambient types.
 
 ```
@@ -73,15 +82,73 @@ Add `airbnb-base` to `.eslintrc`.
   ],
 ```
 
-Add custom eslint rules.
+Install prettier.
 
 ```
+npm i eslint-config-prettier eslint-plugin-prettier prettier -D
+```
+
+Add prettier to .eslintrc
+
+```
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "no-console": "off",
-    "quotes": ["error", "double"],
-    "space-in-parens": ["error", "always"],
-    "array-bracket-spacing": [ "error", "always" ],
+    "prettier/prettier": "error"
   }
+}
+```
+
+Disable/adjust select rules.
+
+```
+    "no-return-await": "off",
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+```
+
+Add settings block.
+
+```
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
+      }
+    }
+  },
 ```
 
 Add VSCode integration
@@ -89,12 +156,12 @@ Add VSCode integration
 ```
 {
   "editor.tabSize": 2,
-  "eslint.format.enable": true,
-  "eslint.validate": ["javascript", "typescript"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "eslint.validate": ["javascript", "typescript"]
 }
 ```
